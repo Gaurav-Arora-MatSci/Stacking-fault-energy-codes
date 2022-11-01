@@ -18,7 +18,7 @@ def make_per_sheared_str():
     # This command is based on linux, it reads the CONTCAR file and keeps the part that is needed further
     #It deletes the lines which are not needed like the zeroes at the end of the file
     #The only care which is to be taken is number, now it is 116: it is calculated by adding total
-    #number of atoms + 8. For example, 108 + 8 = 116 is used here. Also inout the number of total CONTCAR files
+    #number of atoms + 8. For example, 108 + 8 = 116 is used here.
     """
 
     command = subprocess.getoutput("""head -n 116 CONTCAR > CONTCAR-1""")
