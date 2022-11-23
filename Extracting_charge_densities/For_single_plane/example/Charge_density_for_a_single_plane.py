@@ -140,6 +140,7 @@ def Charge_densities_from_CHGCAR_single_plane(str_id, direction,plane_number):
     return(charge_density_for_all_planes, str_id)
 
 charge_density, str_id = Charge_densities_from_CHGCAR_single_plane('CHGCAR-1', 'c', 124)
-import numpy as np
-np.savetxt('X_array-Y_array-density.txt',charge_density[0])
+import pandas as pd
+charge_density[0] = pd.DataFrame(charge_density[0])
+charge_density[0].to_excel('data.xlsx', index = False)
 
